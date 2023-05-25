@@ -16,9 +16,6 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.8.16  # Specify your desired Python version
-          
-      - name: Install dependencies
-        run: pip install -r requirements.txt  # If you have any dependencies, specify them in requirements.txt
-        
+              
       - name: Run Python script
         run: python your_script.py  # Replace 'your_script.py' with the filename of your Python script
