@@ -1,21 +1,16 @@
 name: Daily Python Script
-
 on:
   schedule:
     - cron: "* * * * *"
-
 jobs:
   run-script:
     runs-on: ubuntu-latest
-    
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: 3.8.16  # Specify your desired Python version
-              
       - name: Run Python script
         run: python ${{ github.workspace }}/.github/workflows/your_script.py  # Replace 'your_script.py' with the filename of your Python script
