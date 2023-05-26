@@ -7,9 +7,8 @@ current_date = datetime.date.today()
 date_str = current_date.strftime("%Y-%m-%d")
 
 # Open the file in append mode (creates the file if it doesn't exist)
-file_path = "${{ github.workspace }}/.github/workflows/date_file.txt"  # Specify the file path or name here
+file_path = os.path.join(os.getcwd(), ".github/workflows/date_file.txt")
 with open(file_path, "a") as file:
-    # Write the date to the file
     file.write(date_str + "\n")
 
 print("Date written to file:", date_str)
