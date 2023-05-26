@@ -18,4 +18,4 @@ jobs:
           python-version: 3.8.16  # Specify your desired Python version
               
       - name: Run Python script
-        run: python your_script.py  # Replace 'your_script.py' with the filename of your Python script
+        run: python ${{ github.workspace }}/your_script.py  # Replace 'your_script.py' with the filename of your Python script
